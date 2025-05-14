@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jekyll Site Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Jekyll Site Builder</h1>
+    <p>Build your SEO-friendly GitHub site in seconds!</p>
+  </header>
+
+  <section class="theme-section">
+    <label for="theme">Select Theme:</label>
+    <select id="theme" onchange="loadTheme()">
+      <option value="blog">Blog Theme</option>
+      <option value="portfolio">Portfolio Theme</option>
+    </select>
+  </section>
+
+  <main class="editor-grid">
+    <div class="editor">
+      <h2>_config.yml</h2>
+      <textarea id="configEditor"></textarea>
+
+      <h2>index.md</h2>
+      <textarea id="indexEditor"></textarea>
+
+      <h2>about.md</h2>
+      <textarea id="aboutEditor"></textarea>
+
+      <h2>First Post (Markdown)</h2>
+      <textarea id="postEditor"></textarea>
+
+      <h2>style.css</h2>
+      <textarea id="styleEditor"></textarea>
+
+      <button onclick="downloadSite()">Download GitHub ZIP</button>
+    </div>
+
+    <div class="preview">
+      <h2>Live Markdown Preview</h2>
+      <iframe id="preview"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>Built with love for GitHub + Jekyll</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
